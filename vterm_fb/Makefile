@@ -35,4 +35,5 @@ CSRCS += ../vterm/libvterm/src/vterm.c
 MAINSRC = vterm_fb_main.c
 endif
 
+include $(APPDIR)/external/vapor-nostdinc.mk
 include $(APPDIR)/Application.mk

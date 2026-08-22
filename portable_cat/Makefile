@@ -7,4 +7,5 @@ MODULE    = $(CONFIG_VAPOROS_PORTABLE_CAT)
 
 MAINSRC = portable_cat_main.c
 
+include $(APPDIR)/external/vapor-nostdinc.mk
 include $(APPDIR)/Application.mk

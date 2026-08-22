@@ -6,3 +6,4 @@ CONFIGURED_APPS += $(APPDIR)/external/vterm
 CONFIGURED_APPS += $(APPDIR)/external/vterm_fb
 CONFIGURED_APPS += $(APPDIR)/external/vaporshell
 CONFIGURED_APPS += $(APPDIR)/external/toybox
+CONFIGURED_APPS += $(APPDIR)/external/compat-scan

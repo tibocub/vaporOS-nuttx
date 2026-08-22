@@ -7,6 +7,7 @@ MODULE    = $(CONFIG_VAPOROS_VHELLO)
 
 MAINSRC = vhello_main.c
 
+include $(APPDIR)/external/vapor-nostdinc.mk
 include $(APPDIR)/Application.mk
 
 # Loadable (MODULE=m) builds must not carry gcov instrumentation: the

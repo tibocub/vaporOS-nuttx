@@ -95,6 +95,11 @@ kconfig-tweak --disable CONFIG_DISABLE_MOUNTPOINT
 kconfig-tweak --enable CONFIG_FS_HOSTFS
 kconfig-tweak --enable CONFIG_SIM_HOSTFS
 
+# Compatibility triage tool (docs/c-posix-compatibility.md): scans a C
+# source tree for known vaporOS/NuttX portability gaps, runnable both
+# on the dev host and directly on vaporOS itself.
+kconfig-tweak --enable CONFIG_VAPOROS_COMPAT_SCAN
+
 make olddefconfig
 make -j"$(nproc)"
 

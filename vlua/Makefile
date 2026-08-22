@@ -13,4 +13,5 @@ CFLAGS += ${INCDIR_PREFIX}$(APPDIR)/interpreters/lua/lua
 MAINSRC = vlua_main.c
 CSRCS = vapor_core.c
 
+include $(APPDIR)/external/vapor-nostdinc.mk
 include $(APPDIR)/Application.mk

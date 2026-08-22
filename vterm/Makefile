@@ -25,4 +25,5 @@ CSRCS += libvterm/src/vterm.c
 
 MAINSRC = vtermtest_main.c
 
+include $(APPDIR)/external/vapor-nostdinc.mk
 include $(APPDIR)/Application.mk

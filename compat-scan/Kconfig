@@ -1,0 +1,27 @@
+config VAPOROS_COMPAT_SCAN
+	tristate "compat-scan (vaporOS/NuttX portability triage tool)"
+	default n
+	---help---
+		Scans a C source tree for known vaporOS/NuttX portability
+		gaps (fork() semantics, process groups, symlinks, missing
+		headers, and more -- see docs/c-posix-compatibility.md for
+		the full rationale behind each check), before spending time
+		on a real build attempt. Runs identically as a plain host
+		binary and directly on vaporOS itself -- same source file
+		either way, no vaporOS-specific code at all.
+
+if VAPOROS_COMPAT_SCAN
+
+config VAPOROS_COMPAT_SCAN_PROGNAME
+	string "Program name"
+	default "compat-scan"
+
+config VAPOROS_COMPAT_SCAN_PRIORITY
+	int "compat-scan task priority"
+	default 100
+
+config VAPOROS_COMPAT_SCAN_STACKSIZE
+	int "compat-scan stack size"
+	default DEFAULT_TASK_STACKSIZE
+
+endif
